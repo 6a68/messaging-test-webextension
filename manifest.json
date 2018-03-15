@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "messaging-test-webextension",
+  "version": "1.0",
+  "description": "webextension used to experimentally test return values from runtime.onMessage when registering async listeners",
+  "content_scripts": [
+    {
+      "matches": [
+        "http://localhost/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "permissions": [],
+  "background": {
+    "scripts": [
+      "background.js"
+    ] 
+  },
+  "page_action": {
+    "default_title": "test webextension page action"
+  }
+}
